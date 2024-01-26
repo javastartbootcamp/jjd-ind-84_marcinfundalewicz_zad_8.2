@@ -6,9 +6,12 @@ public class Shop {
 
     public static void main(String[] args) {
         Adress adress = new Adress("Krakow", "Urzednicza", 20);
-        Ticket ticket1 = new Online("Koncert", adress, "Bilet online", 100, 5, 1);
-        Ticket ticket2 = new Standard("Koncert", adress, "Bilet standard", 100, 5, 1);
-        Ticket ticket3 = new Gift("Koncert", adress, "Bilet gift", 100, 5, 1);
+        Ticket ticket1 = new Online("Koncert", adress, "Bilet online", 100, 5);
+        Ticket ticket2 = new Standard("Koncert", adress, "Bilet standard", 100, 5);
+        Ticket ticket3 = new Gift("Koncert", adress, "Bilet gift", 100, 5);
+        System.out.println(ticket1.getNumberOfTicket());
+        System.out.println(ticket2.getNumberOfTicket());
+        System.out.println(ticket3.getNumberOfTicket());
 
         Scanner scanner = new Scanner(System.in);
         int counter;

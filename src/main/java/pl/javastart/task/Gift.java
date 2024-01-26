@@ -3,8 +3,8 @@ package pl.javastart.task;
 public class Gift extends Ticket {
     private static final  int LOGISTIC_COST = 5;
 
-    public Gift(String nameOfEvent, Adress adress, String typeOfTicket, double basicPrice, double discount, double numberOfTicket) {
-        super(nameOfEvent, adress, typeOfTicket, basicPrice, discount, numberOfTicket);
+    public Gift(String nameOfEvent, Adress adress, String typeOfTicket, double basicPrice, double discount) {
+        super(nameOfEvent, adress, typeOfTicket, basicPrice, discount);
     }
 
     @Override

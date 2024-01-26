@@ -3,8 +3,8 @@ package pl.javastart.task;
 public class Standard extends Ticket {
     private static final  int LOGISTIC_COST = 5;
 
-    public Standard(String nameOfEvent, Adress adress, String typeOfTicket, double basicPrice, double discount, double numberOfTicket) {
-        super(nameOfEvent, adress, typeOfTicket, basicPrice, discount, numberOfTicket);
+    public Standard(String nameOfEvent, Adress adress, String typeOfTicket, double basicPrice, double discount) {
+        super(nameOfEvent, adress, typeOfTicket, basicPrice, discount);
     }
 
     @Override

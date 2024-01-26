@@ -6,15 +6,34 @@ public class Ticket {
     private String typeOfTicket;
     private double basicPrice;
     private double discount;
-    private double numberOfTicket;
+    private int numberOfTicket;
+    public static int uniqueNumber = 0;
 
-    public Ticket(String nameOfEvent, Adress adress, String typeOfTicket, double basicPrice, double discount, double numberOfTicket) {
+    public Ticket(String nameOfEvent, Adress adress, String typeOfTicket, double basicPrice, double discount) {
         this.nameOfEvent = nameOfEvent;
         this.adress = adress;
         this.typeOfTicket = typeOfTicket;
         this.basicPrice = basicPrice;
         this.discount = discount;
+        uniqueNumber++;
+        this.numberOfTicket = uniqueNumber;
+
+    }
+
+    public int getNumberOfTicket() {
+        return numberOfTicket;
+    }
+
+    public void setNumberOfTicket(int numberOfTicket) {
         this.numberOfTicket = numberOfTicket;
+    }
+
+    public static int getUniqueNumber() {
+        return uniqueNumber;
+    }
+
+    public static void setUniqueNumber(int uniqueNumber) {
+        Ticket.uniqueNumber = uniqueNumber;
     }
 
     public String getNameOfEvent() {
@@ -57,20 +76,12 @@ public class Ticket {
         this.discount = discount;
     }
 
-    public double getNumberOfTicket() {
-        return numberOfTicket;
-    }
-
-    public void setNumberOfTicket(double numberOfTicket) {
-        this.numberOfTicket = numberOfTicket;
-    }
-
     double finalPrice() {
         return basicPrice - (discount / 100 * basicPrice);
     }
 
     void printFinalPrice() {
-        System.out.print(typeOfTicket + ": " + "cena podstawowa " + basicPrice + " zl," + " znizka " + discount + " %, cena finalna wyniesie ");
+        System.out.print("Unikalny numer biletu: " + numberOfTicket + " " + typeOfTicket + ": " + "cena podstawowa " + basicPrice + " zl," + " znizka " + discount + " %, cena finalna wyniesie ");
     }
 }
 
